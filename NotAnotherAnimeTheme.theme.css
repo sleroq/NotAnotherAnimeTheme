@@ -2,7 +2,7 @@
 * @name NotAnotherAnimeTheme
 * @author puckzxz#2080
 * @version 3.2
-* @description An easily customizable and automatically updating theme
+* @description Performance-optimized fork with animations/blur effects disabled for better CPU/GPU usage
 * @invite FdZhbjY
 * @source https://github.com/sleroq/NotAnotherAnimeTheme
 * @updateUrl https://raw.githubusercontent.com/sleroq/NotAnotherAnimeTheme/master/NotAnotherAnimeTheme.theme.css
@@ -22,16 +22,34 @@
 *, *::before, *::after {
   animation: none !important;
   transition: none !important;
-  transform: none !important;
 }
 
 /* Disable specific Discord animations */
 @keyframes rainbow { 0%, 100% { filter: none !important; } }
 
-/* Force disable hardware acceleration on problematic elements */
+/* Disable specific performance-heavy transforms while preserving positioning */
 .appMount__51fd7 {
   will-change: auto !important;
-  transform: translateZ(0) !important;
+}
+
+/* Disable specific animation-heavy transforms without breaking positioning */
+/* Only target common scaling/rotation animations, preserve positioning transforms */
+.container-1ETFDs:hover,
+.listItem-GuPuDH:hover,
+.guild-1EfMGQ:hover {
+  transform: none !important;
+}
+
+/* Disable scaling animations specifically */
+[class*="scale"]:hover,
+[class*="Scale"]:hover {
+  transform: scale(1) !important;
+}
+
+/* Disable rotation animations */
+[class*="rotate"],
+[class*="Rotate"] {
+  transform: rotate(0deg) !important;
 }
 
 :root {
@@ -72,7 +90,7 @@
     Triple Column:  184px
     Quad Column:    242px
   */
-  --server-listing-width: 126px;
+  --server-listing-width: 62px;
 
   /*
     Font Size
@@ -245,7 +263,6 @@ html {
 .scroller-2FKFPG,
 .scrollableContainer-2NUZem {
   will-change: auto !important;
-  transform: none !important;
   contain: none !important;
 }
 
@@ -264,13 +281,12 @@ html {
 .lookFilled-1Gx00P:hover,
 .lookOutlined-3sRXeN:hover,
 .lookInverted-2D7oAl:hover {
-  transform: none !important;
   filter: none !important;
 }
 
 /* Disable emoji scaling animations */
 .emoji:hover {
-  transform: none !important;
+  transform: scale(1) !important;
 }
 
 /* Force static positioning for better performance */
