@@ -735,23 +735,10 @@ div.unread-mentions-indicator-bottom {
 
 .theme-dark .container-1ETFDs.unread-2OHH1w:before {
     background: var(--main-color);
-    animation: var(--unread-server-animation) 3s linear infinite;
+    /* animation removed for performance */
 }
 
-@keyframes rainbow {
-    0% {
-        -webkit-filter: hue-rotate(0);
-        -moz-filter: hue-rotate(0);
-        -ms-filter: hue-rotate(0);
-        filter: hue-rotate(0);
-    }
-    100% {
-        -webkit-filter: hue-rotate(360deg);
-        -moz-filter: hue-rotate(360deg);
-        -ms-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-}
+/* Rainbow animation removed for performance optimization */
 
 .theme-dark .container-1ETFDs .homeButton-2Cw51C {
     background: transparent;
@@ -759,7 +746,7 @@ div.unread-mentions-indicator-bottom {
 }
 
 .container-1ETFDs:hover {
-    transform: scale(1.08);
+    /* transform animation removed for performance */
 }
 
 .container-1ETFDs .guildIcon-VlWW86 {
@@ -1379,7 +1366,7 @@ padding: 0 !important;
 
 .theme-dark .unread-2OHH1w:before {
     background: var(--main-color) !important;
-    animation: var(--unread-server-animation) 3s linear infinite;
+    /* animation removed for performance */
 }
 
 .selected-nT-gM3:before, .unread-2OHH1w:before {
@@ -1394,7 +1381,7 @@ padding: 0 !important;
 }
 
 .unread-2OHH1w:hover:before {
-    transition: .2s ease;
+    /* transition removed for performance */
     border-radius: 15px;
 }
 
@@ -1673,7 +1660,7 @@ padding: 0 !important;
     width: 54px;
 }
 .item-2hkk8m {
-    animation: var(--unread-server-animation) 3s linear infinite;
+    /* animation removed for performance */
     border: 2px solid var(--main-color);
     background: transparent;
     border-radius: 100%;

@@ -4,11 +4,11 @@
 * @version 3.2
 * @description An easily customizable and automatically updating theme
 * @invite FdZhbjY
-* @source https://github.com/puckzxz/NotAnotherAnimeTheme
-* @updateUrl https://raw.githubusercontent.com/puckzxz/NotAnotherAnimeTheme/master/NotAnotherAnimeTheme.theme.css
+* @source https://github.com/sleroq/NotAnotherAnimeTheme
+* @updateUrl https://raw.githubusercontent.com/sleroq/NotAnotherAnimeTheme/master/NotAnotherAnimeTheme.theme.css
 */
 
-@import url(https://puckzxz.github.io/NotAnotherAnimeTheme/build/v3/naat.v3.css);
+@import url(https://raw.githubusercontent.com/sleroq/NotAnotherAnimeTheme/master/css/v3/naat-min.v3.css);
 
 /*
   To make editing this theme easier I recommend using Notepad++
@@ -16,6 +16,23 @@
 */
 
 /* Any images you use MUST end with .jpg or .png or any other image extension */
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+/* Disable all animations and transitions globally for better CPU/GPU performance */
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Disable specific Discord animations */
+@keyframes rainbow { 0%, 100% { filter: none !important; } }
+
+/* Force disable hardware acceleration on problematic elements */
+.appMount__51fd7 {
+  will-change: auto !important;
+  transform: translateZ(0) !important;
+}
 
 :root {
   /*
@@ -76,9 +93,9 @@
 
   /*
     Change the unread server animation.
-    Replace it with "none" in order to remove any animations and use the main color instead
+    PERFORMANCE: Set to "none" to remove animations and use static color instead
   */
-  --unread-server-animation: rainbow;
+  --unread-server-animation: none;
 
   /*
     Video / Screen share buttons
@@ -201,4 +218,72 @@
   --reaction-emoji-border-color: 1px solid transparent;
   --reaction-emoji-hover-background-color: rgba(255, 255, 255, 0.1);
   --reaction-emoji-hover-border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== ADDITIONAL PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Disable message hover effects for better performance */
+.message-2qnXI6:hover {
+  background: transparent !important;
+}
+
+/* Remove shadows and complex effects */
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Disable smooth scrolling */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Force GPU optimization hints off for better integrated GPU performance */
+.scrollerInner-2PPAp2,
+.scroller-2FKFPG,
+.scrollableContainer-2NUZem {
+  will-change: auto !important;
+  transform: none !important;
+  contain: none !important;
+}
+
+/* Disable typing indicators animation */
+.typingDots-3Bz4un span {
+  animation: none !important;
+}
+
+/* Disable loading spinners animation */
+.spinner-2enMB9,
+.wanderingCubesItem-WPXqao {
+  animation: none !important;
+}
+
+/* Disable button hover effects */
+.lookFilled-1Gx00P:hover,
+.lookOutlined-3sRXeN:hover,
+.lookInverted-2D7oAl:hover {
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Disable emoji scaling animations */
+.emoji:hover {
+  transform: none !important;
+}
+
+/* Force static positioning for better performance */
+.tooltip-2QfLtc,
+.layer-3QrUeG {
+  will-change: auto !important;
+}
+
+/* Disable Discord's built-in smooth animations */
+[class*="animate"],
+[class*="transition"],
+[class*="slide"],
+[class*="fade"] {
+  animation: none !important;
+  transition: none !important;
 }

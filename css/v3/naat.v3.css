@@ -19,7 +19,6 @@
 
   .panels_c48ade {
     background: var(--message-box-transparency);
-    backdrop-filter: blur(5px);
   }
 
   .sidebar_c48ade:after {
@@ -113,22 +112,6 @@
     width: auto;
   }
 
-  @keyframes rainbow {
-    0% {
-      -webkit-filter: hue-rotate(0);
-      -moz-filter: hue-rotate(0);
-      -ms-filter: hue-rotate(0);
-      filter: hue-rotate(0);
-    }
-
-    100% {
-      -webkit-filter: hue-rotate(360deg);
-      -moz-filter: hue-rotate(360deg);
-      -ms-filter: hue-rotate(360deg);
-      filter: hue-rotate(360deg);
-    }
-  }
-
   .pill_e5445c {
     width: 100% !important;
   }
@@ -138,7 +121,6 @@
   }
 
   .item__58105 {
-    animation: var(--unread-server-animation) 3s linear infinite;
     border: 2px solid var(--main-theme-color);
     background: transparent;
     display: block;
@@ -355,31 +337,26 @@
 
   .searchBar__5ec2f {
     background-color: transparent;
-    backdrop-filter: blur(5px);
   }
 
   .itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984 {
     background-color: transparent;
-    backdrop-filter: blur(5px);
   }
 
   .embedFull__623de {
     background-color: transparent !important;
-    backdrop-filter: blur(5px);
   }
 
   .footer__4d95d {
     background: transparent;
-    backdrop-filter: blur(5px);
   }
 
   .textContainer__4d95d {
-    backdrop-filter: blur(15px) !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
 
   .container__0f2e8 {
     background-color: transparent !important;
-    backdrop-filter: blur(5px);
   }
 
   .panel__5dec7 {
@@ -408,7 +385,6 @@
 
   .container__01ae2 {
     background: transparent;
-    backdrop-filter: blur(5px);
   }
 
   .chatLayerWrapper__01ae2 {
@@ -425,11 +401,9 @@
 
   .mainCard_f369db {
     background: transparent;
-    backdrop-filter: blur(5px);
   }
 
   .container_faa96b:hover {
     background: transparent;
-    backdrop-filter: blur(15px);
   }
 }
