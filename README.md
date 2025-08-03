@@ -1,5 +1,5 @@
 <p align="center">
-<img src = "https://raw.githubusercontent.com/puckzxz/NotAnotherAnimeTheme/master/image/header.jpg">
+<img src = "https://share.cum.army/u/djRbwy.png">
 </p>
 
 # NotAnotherAnimeTheme - Performance Optimized Fork
@@ -41,16 +41,10 @@ All the original customization options are preserved:
 
 Edit the CSS variables in the theme file to customize.
 
-## 🙏 Credits
+## Credits
 
 - **Original Theme:** [puckzxz](https://github.com/puckzxz/NotAnotherAnimeTheme)
 - **Performance Optimizations:** This fork
 - **Original Support Discord:** [Join Server](https://discord.gg/FdZhbjY)
-
-## 📸 Preview
-
-![NotAnotherAnimeTheme](https://i.imgur.com/mw6SCPt.jpg)
-
----
 
 *This theme requires Discord Dark mode and is not compatible with minimal mode.*
